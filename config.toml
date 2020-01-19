@@ -5,3 +5,25 @@ theme = "hello-friend-ng"
 
 [author]
     name = "Alexander Kampf"
+
+[params]
+    description = "Personal website by Alexander \"dotKuro\" Kampf"
+    keywords = "computer science yugioh programming"
+    images = ""
+
+    homeSubtitle = "Programmer and TCG Lover"
+
+[params.logo]
+    logoText = "dotKuro$ cd ~"
+
+[[params.social]]
+    name = "github"
+    url = "https://github.com/dotKuro"
+
+[[params.social]]
+    name = "email"
+    url = "mailto:akampftcg@gmail.com"
+
+[[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/dotKuro1337"
