@@ -1,3 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "akampf.dev/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "dotKuro"
+theme = "hello-friend-ng"
+
+[author]
+    name = "Alexander Kampf"
