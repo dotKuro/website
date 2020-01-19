@@ -1,4 +1,4 @@
-baseURL = "akampf.dev/"
+baseURL = "/"
 languageCode = "en-us"
 title = "dotKuro"
 theme = "hello-friend-ng"
@@ -34,3 +34,9 @@ theme = "hello-friend-ng"
     identifier = "about"
     url = "/about"
     weight = 1
+
+[[menu.main]]
+    name = "CV"
+    identifier = "cv"
+    url = "/cv/web"
+    weight = 2
