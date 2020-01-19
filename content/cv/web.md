@@ -16,18 +16,20 @@ drove me into funcional programming.
 
 ## Programming Languages
 
-|                    |                                    |
-|-------------------:|------------------------------------|
-|             Python | {{< progressbar progress="95" >}}  |
-|            Haskell | {{< progressbar progress="90" >}} |
-|         Bash/Shell | {{< progressbar progress="90" >}} |
-| Typescript(Server) | {{< progressbar progress="75" >}} |
-|                SQL | {{< progressbar progress="60" >}} |
-|              C/C++ | {{< progressbar progress="40" >}} |
-|  HTML/CSS/JS (Web) | {{< progressbar progress="30" >}} |
-|                 GO | {{< progressbar progress="30" >}} |
+|                    |                                 |   |                   |                                 |
+|-------------------:|---------------------------------|---|------------------:|---------------------------------|
+|             Python | {{< progressbar progress=95 >}} |   |               SQL | {{< progressbar progress=60 >}} |
+|            Haskell | {{< progressbar progress=90 >}} |   |             C/C++ | {{< progressbar progress=40 >}} |
+|         Bash/Shell | {{< progressbar progress=90 >}} |   | HTML/CSS/JS (Web) | {{< progressbar progress=30 >}} |
+| Typescript(Server) | {{< progressbar progress=75 >}} |   |                Go | {{< progressbar progress=30 >}} |
+
 
 ## Tools
+|                     |   |                     |   |                     |   |                     |   |                     |   |                     |
+|:-------------------:|---|:-------------------:|---|:-------------------:|---|:-------------------:|---|:-------------------:|---|:-------------------:|
+| Docker              |   | doxygen             |   | git                 |   | npm                 |   | pipenv              |   | stack               |
+|                     |   |                     |   |                     |   |                     |   |                     |   |                     |
+| {{< dot size=70 >}} |   | {{< dot size=30 >}} |   | {{< dot size=90 >}} |   | {{< dot size=65 >}} |   | {{< dot size=45 >}} |   | {{< dot size=45 >}} |
 
 ## Expierence
 

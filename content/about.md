@@ -29,7 +29,6 @@ website in a [github repository](https://github.com/dotKuro/website/) of mine.
 
 Recently I started spending a lot of the time at the local CCC-Erfa.
 
-
 #### TCG
 I have quite the history with card games. I played a lot of them: Pokemon,
 Hearthstone, Spellweaver to name a few. This year I got active in the local
