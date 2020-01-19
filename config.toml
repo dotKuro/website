@@ -27,3 +27,10 @@ theme = "hello-friend-ng"
 [[params.social]]
     name = "twitter"
     url  = "https://twitter.com/dotKuro1337"
+
+
+[[menu.main]]
+    name = "whoami"
+    identifier = "about"
+    url = "/about"
+    weight = 1
