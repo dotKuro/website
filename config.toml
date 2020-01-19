@@ -15,7 +15,7 @@ theme = "hello-friend-ng"
 
 [params.logo]
     logoText = "dotKuro$ cd ~"
-    logoColor = "#fe5186"
+    logoColor = "#aa2040"
 
 [[params.social]]
     name = "github"

@@ -1,4 +1,20 @@
 <div style="border-style: solid; border-width: 1px; display: inline-block;
-             width: 150px; height: 25px; vertical-align: middle;">
-  <div style="width: {{ .Get `progress` }}%; height: 100%; background: {{ .Site.Params.Logo.logoColor }};"></div>
+            width: 150px; height: 25px; vertical-align: middle;">
+  <style>
+    @keyframes scaleUp {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+  </style>
+  <div style="animation: 1s ease-out 0s 1 scaleUp;
+              transform-origin: 0% 50%;
+              width: {{ .Get `progress` }}%;
+              height: 100%;
+              background: {{ .Site.Params.Logo.logoColor }};
+              align: left;">
+  </div>
 </div>
