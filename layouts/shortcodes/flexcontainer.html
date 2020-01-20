@@ -1,0 +1,5 @@
+<div style="display: flex;
+            flex-wrap: wrap;
+            {{ .Get `add_style` }}">
+  {{ printf "%s" .Inner | safeHTML }}
+</div>

@@ -40,4 +40,3 @@ playing again. I am really happy that the deck is decent at the moment.
 In general I am really passionate about my hobbies. And that is the reason why
 this website exists in the first place. I will use this site to post articles or
 maybe even videos whenever I want to share something about any of my hobbies.
-

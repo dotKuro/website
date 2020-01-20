@@ -1,0 +1,22 @@
+<table style="width: 100%">
+  <tr>
+    <td width="130px" valign="top">
+      {{ .Get "time" }}
+    </td>
+    <td valign="top">
+      <strong>{{ .Get "title" }}</strong>
+    <td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <small>{{ .Get "add_info" }}</small>
+    </td>
+    <td valign="top">
+      <small>{{ .Get "place" }}</small>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{{ .Inner }}</td>
+  </tr>
+</table>
