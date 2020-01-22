@@ -2,3 +2,12 @@
     max-width: $content-width;
     margin: 0 auto;
 }
+
+.content-title {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.content-inner {
+    padding: 0 10px;
+}
