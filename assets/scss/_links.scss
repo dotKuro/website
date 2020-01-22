@@ -1,0 +1,11 @@
+.undecorated-link {
+    text-decoration: none;
+}
+
+a {
+    color: $light-color;
+}
+
+.dark-mode a {
+    color: $dark-color;
+}

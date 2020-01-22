@@ -1,0 +1,19 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+{{ with .Params.author }}<meta name="author" content="{{ . }}" />{{ end }}
+<meta
+  name="description"
+  content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"
+/>
+<meta name="keywords" content="{{ .Site.Params.keywords }}" />
+<title>
+  {{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} :: {{ .Site.Title }} {{ end }}
+</title>
+
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">

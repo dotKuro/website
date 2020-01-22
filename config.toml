@@ -13,7 +13,7 @@ title = "dotKuro"
     homeSubtitle = "Programmer and TCG Lover"
 
 [params.logo]
-    logoText = "dotKuro$ cd ~"
+    logoText = "> dotKuro$ cd ~"
     logoColor = "#aa2040"
 
 [[params.social]]

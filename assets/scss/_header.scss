@@ -1,0 +1,82 @@
+header {
+    // set colors for header
+    background: $light-background-secondary;
+
+    // header background color should be on the entire width of the page
+    width: 100%;
+
+    // Fix the header in height
+    height: 70px;
+}
+
+.dark-mode header {
+    // set dark mode color for header
+    background: $dark-background-secondary;
+}
+
+.header-inner {
+    // inner header should dynamiclly increate until the width of the content of the page
+    max-width: $content-width;
+
+    // center inner header horizontally
+    margin: 0 auto;
+
+    // make the inner two containers be left and right with maximal space in between
+    display: flex;
+    justify-content: space-between;
+
+    // make the inner header have maximal height
+    height: 100%;
+
+    // some space around the header
+    padding: 0 10px
+}
+
+.header-inner > div {
+    // set maximal height of left and right header
+    height: 100%;
+
+    // to center content vertically
+    display: table;
+}
+
+.header-left {
+    // entire text in on line
+    white-space: nowrap;
+}
+
+.logo {
+    // center element vertically
+    display: table-cell;
+    vertical-align: middle;
+
+    // make font bold
+    font-weight: 700;
+
+    // set larger font and monospace for logo
+    font-size: 20px;
+    font-family: monospace;
+}
+
+nav {
+    // center element vertically
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu {
+    // remove bullets from list
+    list-style-type: none;
+
+    // remove inner padding for ul in menu
+    padding-inline-start: 0;
+}
+
+.menu li {
+    // make list horizontal
+    display: inline;
+
+    // space between menu bullets
+    padding-left: 20px;
+}
+
