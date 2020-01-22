@@ -1,3 +1,10 @@
 {{ define "main" }}
-<main></main>
+<main>
+  <div class="index-inner">
+    <h1 class="index-title">{{ .Title }}</h1>
+    {{- with .Site.Params.homeSubtitle  }}
+    <p class="index-subtitle">{{ . }}</p>
+    {{- end }}
+  </div>
+</main>
 {{ end }}
