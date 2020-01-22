@@ -5,6 +5,9 @@
     flex-direction: column;
     background: $light-background;
     color: $light-color;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .dark-mode.container {
@@ -14,7 +17,6 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 html, body {
