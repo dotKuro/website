@@ -7,7 +7,7 @@ draft: false
 My name is Alex or dotKuro. I am a computer science student, developer and TCG
 lover from Frankfurt in Germany.
 
-#### Computer Science
+### Computer Science
 My computer science related hobbies are not only programming. I'm also really
 into mathss, theoretical computer science and the theory behind programming
 languages, especially behind functional programming.
@@ -29,14 +29,14 @@ website in a [github repository](https://github.com/dotKuro/website/) of mine.
 
 Recently I started spending a lot of the time at the local CCC-Erfa.
 
-#### TCG
+### TCG
 I have quite the history with card games. I played a lot of them: Pokemon,
 Hearthstone, Spellweaver to name a few. This year I got active in the local
 Yu-Gi-Oh! scene again. This is the card game i probably spent my most time with.
 My favorite deck of all time is Nekroz. This deck is the reason I started
 playing again. I am really happy that the deck is decent at the moment.
 
-#### This Website
+### This Website
 In general I am really passionate about my hobbies. And that is the reason why
 this website exists in the first place. I will use this site to post articles or
 maybe even videos whenever I want to share something about any of my hobbies.

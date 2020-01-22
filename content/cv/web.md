@@ -4,9 +4,9 @@ date: 2020-01-19T13:15:58+01:00
 draft: false
 ---
 
-# Alexander Kampf -- Developer
+## Alexander Kampf -- Developer
 
-## Who am I?
+### Who am I?
 I am a computer science student with a preference for maths and functional
 programming. I programm since the start of my studies, mostly solving
 mathematical problems and automating  my personal workfow. More recently I
@@ -51,7 +51,7 @@ drove me into funcional programming.
     semester I can say that this branch of computer science it not my future.
 {{< /cvbullet >}}
 
-## Education
+### Education
 
 {{< cvbullet time="2017 - today" add_info="ongoing" place="Goethe University Frankfurt" title="Bachelor's Degree" >}}
 Studying computer science with a personal focus on theoretical computer science and math. My
@@ -64,20 +64,20 @@ my master’s degree once I am finished with the current studies.
 Completed with advanced courses in maths, chemistry and basic courses in computer science
 {{< /cvbullet >}}
 
-## Languages
+### Languages
 
 - **German** -- native
 - **English** -- proficient
 - **Russian** -- nearly nothing but learning
 
-## Interests
+### Interests
 
 - **Privacy**
 - **Linux**
 - **(Functional) Programming**
 - **Gaming**
 
-## Non Profit
+### Non Profit
 
 Together with other members of the student association, we help freshmen to get
 started with their studies. We organize orientation events. Other than that I
