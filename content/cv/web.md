@@ -17,9 +17,9 @@ drove me into funcional programming.
 {{< flexcontainer >}}
 
 {{< flexitem >}}
-<h2>Programming Languages</h2>
+<h3>Programming Languages</h3>
 <table>
-    <tr><td>Python</td> <td>{{< progressbar progress=95 >}}</td></tr>
+    <tr><td style="width: 200px;">Python</td> <td>{{< progressbar progress=95 >}}</td></tr>
     <tr><td>Haskell</td> <td>{{< progressbar progress=90 >}}</td></tr>
     <tr><td>Bash/Shell</td> <td>{{< progressbar progress=90 >}}</td></tr>
     <tr><td>Typescript (Server)</td> <td>{{< progressbar progress=75 >}}</td></tr>
@@ -31,9 +31,9 @@ drove me into funcional programming.
 {{< /flexitem >}}
 
 {{< flexitem >}}
-<h2>Tools</h2>
+<h3>Tools</h3>
 <table>
-    <tr><td>Git</td> <td>{{< progressbar progress=90 >}}</td></tr>
+    <tr><td style="width: 200px">Git</td> <td>{{< progressbar progress=90 >}}</td></tr>
     <tr><td>Docker</td> <td>{{< progressbar progress=70 >}}</td></tr>
     <tr><td>NPM/Yarn</td> <td>{{< progressbar progress=65 >}}</td></tr>
     <tr><td>Pipenv</td> <td>{{< progressbar progress=45 >}}</td></tr>
@@ -43,7 +43,8 @@ drove me into funcional programming.
 {{< /flexitem >}}
 
 {{< /flexcontainer >}}
-## Expierence
+
+### Expierence
 
 {{< cvbullet time="03/2019 - 10/2019" add_info="student employee" place="Degussa Bank" title="Data Scientist">}} 
     Analysis of huge amount of customer data, development of prediction models
@@ -64,18 +65,26 @@ my master’s degree once I am finished with the current studies.
 Completed with advanced courses in maths, chemistry and basic courses in computer science
 {{< /cvbullet >}}
 
+{{< flexcontainer >}}
+
+{{% flexitem %}}
 ### Languages
 
 - **German** -- native
 - **English** -- proficient
 - **Russian** -- nearly nothing but learning
+{{% /flexitem %}}
 
+{{% flexitem %}}
 ### Interests
 
 - **Privacy**
 - **Linux**
 - **(Functional) Programming**
 - **Gaming**
+{{% /flexitem %}}
+
+{{< /flexcontainer >}}
 
 ### Non Profit
 

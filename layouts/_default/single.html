@@ -1,8 +1,10 @@
 {{ define "main" }}
-<article class="content-inner">
-  <h1 class="content-title">{{ .Title | markdownify }}</h1>
-  <div>
-    {{ .Content  }}
-  </div>
-</article>
+<main>
+  <article class="content-inner">
+    <h1 class="content-title">{{ .Title | markdownify }}</h1>
+    <div>
+      {{ .Content  }}
+    </div>
+  </article>
+</main>
 {{ end }}
