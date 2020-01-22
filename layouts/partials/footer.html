@@ -1,0 +1,16 @@
+<footer>
+    <span>
+      &copy; {{ now.Format "2006" }}
+    </span>
+    {{ if .Site.Author.name  }}
+    <span>
+      <a href="{{ .Site.BaseURL  }}">{{ .Site.Author.name  }}</a>
+    </span>
+    {{ end  }}
+    <span>
+      <a href="{{ .Site.BaseURL }}/dsgvo/">Datenschutzerklärung</a>
+    </span>
+    <span>
+      <a href="{{ .Site.BaseURL }}/impressum/">Impressum</a>
+    </span>
+</footer>
