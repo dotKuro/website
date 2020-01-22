@@ -1,7 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "dotKuro"
-theme = "hello-friend-ng"
 
 [author]
     name = "Alexander Kampf"
