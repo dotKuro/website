@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  dotkuro-nginx:
+    build: .
+    volumes: 
+      - ./ngnix.conf:/etc/nginx/nginx.conf:ro
+      - ./dist:/app/dist
+      - ./src:/app/src
+      - ./elm.json:/app/elm.json
+      - ./build.sh:/app/build.sh
+
+    ports:
+      - 8080:80
