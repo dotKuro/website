@@ -9,6 +9,7 @@ services:
       - ./src:/app/src
       - ./elm.json:/app/elm.json
       - ./build.sh:/app/build.sh
+      - ./fonts:/app/fonts
 
     ports:
       - 8080:80

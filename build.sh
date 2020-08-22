@@ -2,3 +2,4 @@
 
 elm make src/Main.elm --output dist/main.js &&
 cp src/index.html dist/index.html
+cp -r fonts/ dist/

@@ -4,12 +4,15 @@ import Browser exposing (Document, UrlRequest, application)
 import Browser.Navigation exposing (Key, load, pushUrl)
 import Css exposing (..)
 import Css.Global exposing (body, global, html)
+import Footer
+import Header
 import Helper exposing (StyledDocument)
-import Html.Styled as Html exposing (div, main_, toUnstyled)
+import Html.Styled as Html exposing (div, footer, header, main_, toUnstyled)
 import Html.Styled.Attributes exposing (css)
 import Pages.Home
 import Pages.NotFound
 import Platform exposing (Program)
+import Theme exposing (Theme, dark)
 import Url exposing (Url)
 
 
@@ -21,6 +24,7 @@ type Page
 type alias Model =
     { navigationKey : Key
     , page : Page
+    , theme : Theme
     }
 
 
@@ -41,7 +45,7 @@ urlToPage url =
 
 init : flags -> Url -> Key -> ( Model, Cmd Msg )
 init _ url key =
-    ( { navigationKey = key, page = urlToPage url }, Cmd.none )
+    ( { navigationKey = key, page = urlToPage url, theme = dark }, Cmd.none )
 
 
 viewPage : (msg -> Msg) -> StyledDocument msg -> StyledDocument Msg
@@ -67,6 +71,8 @@ view model =
                 [ html
                     [ width (pct 100)
                     , height (pct 100)
+                    , backgroundColor model.theme.background
+                    , color model.theme.foreground
                     ]
                 , body
                     [ width (pct 100)
@@ -74,8 +80,17 @@ view model =
                     , margin (px 0)
                     ]
                 ]
-            , div [ css [ displayFlex, width (pct 100), height (pct 100) ] ]
-                [ main_ [ css [ flexGrow (int 1) ] ] page.body
+            , div
+                [ css
+                    [ displayFlex
+                    , flexDirection column
+                    , width (pct 100)
+                    , height (pct 100)
+                    ]
+                ]
+                [ header [] (Header.view model.theme)
+                , main_ [ css [ flexGrow (int 1), width (pct 100) ] ] page.body
+                , footer [] (Footer.view model.theme)
                 ]
             ]
     }
