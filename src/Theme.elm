@@ -7,7 +7,7 @@ type alias Theme =
     { background : Color
     , foreground : Color
     , alternateBackground : Color
-    , maxPageWidth : Float
+    , accentColor : Color
     }
 
 
@@ -16,5 +16,5 @@ dark =
     { background = rgb 40 40 40
     , foreground = rgb 225 225 225
     , alternateBackground = rgb 50 50 50
-    , maxPageWidth = 850
+    , accentColor = rgb 255 85 85
     }

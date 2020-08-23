@@ -1,14 +1,15 @@
 module Footer exposing (view)
 
 import Css exposing (..)
+import Helper exposing (maxPageWidth)
 import Html.Styled exposing (Html, div, span, text)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (plainLink)
 import Theme exposing (Theme)
 
 
-view : Theme -> List (Html msg)
-view theme =
+view : Int -> List (Html msg)
+view year =
     [ div
         [ css
             [ padding (px 5)
@@ -21,13 +22,13 @@ view theme =
         ]
         [ div
             [ css
-                [ maxWidth (px theme.maxPageWidth)
+                [ maxWidth (px maxPageWidth)
                 , displayFlex
                 , flexDirection row
                 , flexWrap wrap
                 ]
             ]
-            [ span [ css [ margin (px 5) ] ] [ text "© 2020 Alexander Kampf" ]
+            [ span [ css [ margin (px 5) ] ] [ text <| "© " ++ String.fromInt year ++ " Alexander Kampf" ]
             , span [ css [ margin (px 5) ] ] [ plainLink [ href "/datenschutz" ] [ text "Datenschutzerklärung" ] ]
             , span [ css [ margin (px 5) ] ] [ plainLink [ href "/impressum" ] [ text "Impressum" ] ]
             , span [ css [ margin (px 5) ] ] [ plainLink [ href "https://github.com/dotKuro/website/issues" ] [ text "Report a bug" ] ]

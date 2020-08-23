@@ -1,15 +1,15 @@
 module Pages.NotFound exposing (view)
 
 import Css exposing (..)
-import Helper exposing (StyledDocument)
+import Helper exposing (StyledDocument, maxPageWidth)
 import Html.Styled exposing (div, p, text)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (plainLink)
 import Theme exposing (Theme)
 
 
-view : Theme -> StyledDocument msg
-view theme =
+view : StyledDocument msg
+view =
     { title = "Not Found"
     , body =
         [ div
@@ -20,7 +20,7 @@ view theme =
                 , height (pct 100)
                 , flexDirection column
                 , padding (px 10)
-                , maxWidth (px theme.maxPageWidth)
+                , maxWidth (px maxPageWidth)
                 ]
             ]
             [ p [] [ text "This page was not found." ]

@@ -1,6 +1,7 @@
 module Header exposing (view)
 
 import Css exposing (..)
+import Helper exposing (maxPageWidth)
 import Html.Styled exposing (Html, div, nav, text)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (plainLink)
@@ -23,7 +24,7 @@ view theme =
             [ css
                 [ displayFlex
                 , justifyContent spaceBetween
-                , maxWidth (px theme.maxPageWidth)
+                , maxWidth (px maxPageWidth)
                 , flexGrow (int 1)
                 , fontSize (px 20)
                 ]
