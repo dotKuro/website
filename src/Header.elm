@@ -23,13 +23,16 @@ view theme =
             [ css
                 [ displayFlex
                 , justifyContent spaceBetween
-                , maxWidth (px 850)
+                , maxWidth (px theme.maxPageWidth)
                 , flexGrow (int 1)
                 , fontSize (px 20)
                 ]
             ]
             [ plainLink [ css [ fontWeight bold ], href "/" ] [ text "> dotKuro$ cd ~" ]
-            , nav [] [ text "CV" ]
+            , nav []
+                [ plainLink [ css [ margin2 (px 0) (px 5) ] ] [ text "whoami" ]
+                , plainLink [ css [ margin2 (px 0) (px 5) ] ] [ text "CV" ]
+                ]
             ]
         ]
     ]

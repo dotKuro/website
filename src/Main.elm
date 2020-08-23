@@ -62,7 +62,7 @@ view model =
                     viewPage identity Pages.Home.view
 
                 NotFound ->
-                    viewPage identity Pages.NotFound.view
+                    viewPage identity <| Pages.NotFound.view model.theme
     in
     { title = page.title ++ " :: dotKuro"
     , body =
@@ -89,7 +89,7 @@ view model =
                     ]
                 ]
                 [ header [] (Header.view model.theme)
-                , main_ [ css [ flexGrow (int 1), width (pct 100) ] ] page.body
+                , main_ [ css [ flexGrow (int 1), width (pct 100), displayFlex, justifyContent center ] ] page.body
                 , footer [] (Footer.view model.theme)
                 ]
             ]

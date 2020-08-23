@@ -8,7 +8,7 @@ import Theme exposing (Theme)
 
 
 view : Theme -> List (Html msg)
-view _ =
+view theme =
     [ div
         [ css
             [ padding (px 5)
@@ -21,15 +21,16 @@ view _ =
         ]
         [ div
             [ css
-                [ maxWidth (px 850)
+                [ maxWidth (px theme.maxPageWidth)
                 , displayFlex
                 , flexDirection row
                 , flexWrap wrap
                 ]
             ]
-            [ span [ css [ margin (px 3) ] ] [ text "© 2020 Alexander Kampf" ]
-            , span [ css [ margin (px 3) ] ] [ plainLink [ href "/datenschutz" ] [ text "Datenschutzerklärung" ] ]
-            , span [ css [ margin (px 3) ] ] [ plainLink [ href "/impressum" ] [ text "Impressum" ] ]
+            [ span [ css [ margin (px 5) ] ] [ text "© 2020 Alexander Kampf" ]
+            , span [ css [ margin (px 5) ] ] [ plainLink [ href "/datenschutz" ] [ text "Datenschutzerklärung" ] ]
+            , span [ css [ margin (px 5) ] ] [ plainLink [ href "/impressum" ] [ text "Impressum" ] ]
+            , span [ css [ margin (px 5) ] ] [ plainLink [ href "https://github.com/dotKuro/website/issues" ] [ text "Report a bug" ] ]
             ]
         ]
     ]
