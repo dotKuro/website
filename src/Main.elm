@@ -124,10 +124,10 @@ view model =
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    let
-        updatePage toMsg toPage ( pageMsg, pageModel ) =
-            ( { model | page = toPage pageModel }, Cmd.map toMsg pageMsg )
-    in
+    --    let
+    --        updatePage toMsg toPage ( pageMsg, pageModel ) =
+    --            ( { model | page = toPage pageModel }, Cmd.map toMsg pageMsg )
+    --    in
     case ( msg, model.page ) of
         ( ClickedLink urlRequest, _ ) ->
             case urlRequest of

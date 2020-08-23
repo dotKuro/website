@@ -2,7 +2,7 @@ module Pages.Datenschutz exposing (view)
 
 import Css exposing (..)
 import Helper exposing (StyledDocument, maxPageWidth)
-import Html.Styled exposing (a, br, div, h1, h2, h3, li, p, text, ul)
+import Html.Styled exposing (br, div, h1, h2, h3, li, p, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (coloredLink)
 import Theme exposing (Theme)

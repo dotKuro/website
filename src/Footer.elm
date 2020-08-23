@@ -5,7 +5,6 @@ import Helper exposing (maxPageWidth)
 import Html.Styled exposing (Html, div, span, text)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (plainLink)
-import Theme exposing (Theme)
 
 
 view : Int -> List (Html msg)

@@ -5,7 +5,6 @@ import Helper exposing (StyledDocument, maxPageWidth)
 import Html.Styled exposing (div, p, text)
 import Html.Styled.Attributes exposing (css, href)
 import Styled exposing (plainLink)
-import Theme exposing (Theme)
 
 
 view : StyledDocument msg
