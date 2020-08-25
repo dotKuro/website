@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Browser exposing (Document, UrlRequest, application)
+import Browser.Events exposing (onResize)
 import Browser.Navigation exposing (Key, load, pushUrl)
 import Css exposing (..)
 import Css.Global exposing (body, global, html)
@@ -13,6 +14,7 @@ import Pages.Datenschutz
 import Pages.Home
 import Pages.Impressum
 import Pages.NotFound
+import Pages.WhoAmI
 import Platform exposing (Program)
 import Task
 import Theme exposing (Theme, dark)
@@ -24,6 +26,7 @@ type Page
     = Home
     | Datenschutz
     | Impressum
+    | WhoAmI
     | NotFound
 
 
@@ -31,14 +34,20 @@ type alias Model =
     { navigationKey : Key
     , page : Page
     , theme : Theme
-    , year : Int
+    , header : Header.Model
+    , footer : Footer.Model
     }
 
 
 type Msg
     = ClickedLink UrlRequest
     | ChangedUrl Url
-    | RecievedTime Time.Posix
+    | GotFooterMsg Footer.Msg
+    | GotHeaderMsg Header.Msg
+
+
+type alias WindowWidth =
+    Int
 
 
 urlToPage : Url -> Page
@@ -53,18 +62,22 @@ urlToPage url =
         "/datenschutz" ->
             Datenschutz
 
+        "/whoami" ->
+            WhoAmI
+
         _ ->
             NotFound
 
 
-init : flags -> Url -> Key -> ( Model, Cmd Msg )
-init _ url key =
+init : WindowWidth -> Url -> Key -> ( Model, Cmd Msg )
+init windowWidth url key =
     ( { navigationKey = key
       , page = urlToPage url
       , theme = dark
-      , year = 2020
+      , footer = Footer.init
+      , header = Header.init windowWidth
       }
-    , Time.now |> Task.perform RecievedTime
+    , Time.now |> Task.perform (\now -> GotFooterMsg <| Footer.GotYear <| Time.toYear Time.utc now)
     )
 
 
@@ -86,6 +99,9 @@ view model =
 
                 Impressum ->
                     viewPage identity Pages.Impressum.view
+
+                WhoAmI ->
+                    viewPage identity <| Pages.WhoAmI.view model.theme
 
                 NotFound ->
                     viewPage identity Pages.NotFound.view
@@ -114,20 +130,28 @@ view model =
                     , height (pct 100)
                     ]
                 ]
-                [ header [] (Header.view model.theme)
+                [ header [] <| List.map (Html.map GotHeaderMsg) <| Header.view model.theme model.header
                 , main_ [ css [ flexGrow (int 1), width (pct 100), displayFlex, justifyContent center ] ] page.body
-                , footer [] <| Footer.view model.year
+                , footer [] <| Footer.view model.footer
                 ]
             ]
     }
 
 
+
+-- updatePage toMsg toPage ( pageMsg, pageModel ) =
+--   ( { model | page = toPage pageModel }, Cmd.map toMsg pageMsg )
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    --    let
-    --        updatePage toMsg toPage ( pageMsg, pageModel ) =
-    --            ( { model | page = toPage pageModel }, Cmd.map toMsg pageMsg )
-    --    in
+    let
+        updateFooter toMsg ( footerModel, footerMsg ) =
+            ( { model | footer = footerModel }, Cmd.map toMsg footerMsg )
+
+        updateHeader toMsg ( headerModel, headerMsg ) =
+            ( { model | header = headerModel }, Cmd.map toMsg headerMsg )
+    in
     case ( msg, model.page ) of
         ( ClickedLink urlRequest, _ ) ->
             case urlRequest of
@@ -140,8 +164,11 @@ update msg model =
         ( ChangedUrl url, _ ) ->
             ( { model | page = urlToPage url }, Cmd.none )
 
-        ( RecievedTime now, _ ) ->
-            ( { model | year = Time.toYear Time.utc now }, Cmd.none )
+        ( GotFooterMsg footerMsg, _ ) ->
+            updateFooter GotFooterMsg <| Footer.update footerMsg model.footer
+
+        ( GotHeaderMsg headerMsg, _ ) ->
+            updateHeader GotHeaderMsg <| Header.update headerMsg model.header
 
 
 
@@ -151,10 +178,13 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Sub.none
+    onResize
+        (\width _ ->
+            GotHeaderMsg <| Header.GotScreenType <| Header.widthToScreenType width
+        )
 
 
-main : Program () Model Msg
+main : Program WindowWidth Model Msg
 main =
     application
         { init = init

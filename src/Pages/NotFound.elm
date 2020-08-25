@@ -24,7 +24,9 @@ view =
             ]
             [ p [] [ text "This page was not found." ]
             , p [ css [ textAlign center ] ]
-                [ text "If you got here by clicking a link on my page, and not by editing the url by hand like a real hacker, tell me, so I can fix it. Thanks!" ]
+                [ text "If you got here by clicking a link on my page, and not by editing the url by hand like a real hacker, "
+                , text "tell me, so I can fix it. Thanks!"
+                ]
             , p []
                 [ plainLink
                     [ href "https://github.com/dotKuro/website/issues"
