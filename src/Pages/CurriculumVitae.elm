@@ -2,7 +2,7 @@ module Pages.CurriculumVitae exposing (view)
 
 import Css exposing (..)
 import Helper exposing (StyledDocument, maxPageWidth)
-import Html.Styled exposing (div, h1, h2, small, span, strong, table, td, text, tr)
+import Html.Styled exposing (Html, div, h1, h2, small, span, strong, table, td, text, tr)
 import Html.Styled.Attributes exposing (css)
 import Theme exposing (Theme)
 
@@ -102,6 +102,7 @@ view theme =
     }
 
 
+entry : String -> String -> String -> String -> List (Html msg) -> Html msg
 entry dateString jobDescription jobType corporation content =
     Html.Styled.table [ css [ paddingBottom (px 10) ] ]
         [ tr []
@@ -119,6 +120,7 @@ entry dateString jobDescription jobType corporation content =
         ]
 
 
+progressbar : Theme -> String -> Float -> Html msg
 progressbar theme title progress =
     div [ css [ displayFlex, Css.flexDirection column ] ]
         [ span [ css [ paddingBottom (px 5) ] ] [ text title ]

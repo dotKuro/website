@@ -1,0 +1,24 @@
+version: "3.8"
+
+# Only needed for traefik deployment
+networks:
+  http_network:
+    external: true
+
+services:
+  dotkuro-nginx-prod:
+    build: .
+    # Deployment with dedicated port
+    #ports:
+    #  - 80:80
+    # Deployment with traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.synapse.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.synapse.entrypoints=websecure"
+      - "traefik.http.routers.synapse.tls.certresolver=myresolver"
+      - "traefik.docker.network=http_network"
+      - "traefik.http.services.synapse.loadbalancer.server.port=80"
+    networks:
+      - http_network
+

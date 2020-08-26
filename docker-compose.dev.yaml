@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   dotkuro-nginx:
-    build: .
+    build: docker-dev
     volumes: 
       - ./ngnix.conf:/etc/nginx/nginx.conf:ro
       - ./dist:/app/dist
