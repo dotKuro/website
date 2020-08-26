@@ -10,6 +10,7 @@ import Header
 import Helper exposing (StyledDocument)
 import Html.Styled as Html exposing (div, footer, header, main_, toUnstyled)
 import Html.Styled.Attributes exposing (css)
+import Pages.CurriculumVitae
 import Pages.Datenschutz
 import Pages.Home
 import Pages.Impressum
@@ -26,6 +27,7 @@ type Page
     = Home
     | Datenschutz
     | Impressum
+    | CurriculumVitae
     | WhoAmI
     | NotFound
 
@@ -65,6 +67,9 @@ urlToPage url =
         "/whoami" ->
             WhoAmI
 
+        "/curriculum-vitae" ->
+            CurriculumVitae
+
         _ ->
             NotFound
 
@@ -102,6 +107,9 @@ view model =
 
                 WhoAmI ->
                     viewPage identity <| Pages.WhoAmI.view model.theme
+
+                CurriculumVitae ->
+                    viewPage identity <| Pages.CurriculumVitae.view model.theme
 
                 NotFound ->
                     viewPage identity Pages.NotFound.view

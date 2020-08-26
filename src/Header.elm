@@ -1,7 +1,6 @@
 module Header exposing (Model, Msg(..), init, update, view, widthToScreenType)
 
 import Css exposing (..)
-import Debug
 import FeatherIcons as Icon
 import Helper exposing (maxPageWidth)
 import Html.Styled exposing (Html, div, fromUnstyled, nav, text)
