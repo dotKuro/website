@@ -14,11 +14,11 @@ services:
     # Deployment with traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.synapse.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.synapse.entrypoints=websecure"
-      - "traefik.http.routers.synapse.tls.certresolver=myresolver"
+      - "traefik.http.routers.website.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.website.entrypoints=websecure"
+      - "traefik.http.routers.website.tls.certresolver=myresolver"
       - "traefik.docker.network=http_network"
-      - "traefik.http.services.synapse.loadbalancer.server.port=80"
+      - "traefik.http.services.website.loadbalancer.server.port=80"
     networks:
       - http_network
 
